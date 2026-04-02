@@ -1,0 +1,277 @@
+*overallPage
+{
+background-color:whitesmoke;
+}
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:bolder;
+  font-style: normal;
+}
+.header
+{
+   background-color: antiquewhite;
+   border-radius: 1rem;
+   width: 96vw;
+   margin: 0px;
+   padding-top: 1.2rem;
+   padding-bottom: 1.2rem;
+   padding-left: clamp(1rem,1.5vw,2rem);
+   padding-right: clamp(1rem,1.5vw,2rem);
+
+}
+
+.navSection
+    {
+        display:flex;
+        flex: 3;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-self: center;
+        overflow:hidden;
+        flex-wrap: wrap;
+        gap: clamp(0.2rem,10vw,14rem);
+    }
+    @media (min-width:768px){
+        .navSection
+        {
+            flex-direction: row;
+        }
+        .navLogo
+        {
+            width:40px; 
+            height:16px;
+        }
+         .navbutton
+        {
+        align-content: center;
+        background-color: #7600bc;
+        color: antiquewhite;
+        font-weight: bold;
+        }
+    }
+        
+   .navLogo
+    {
+     width:100px;
+     height:50px;
+    }
+
+    .navBar
+    {
+        opacity:90%;
+        margin-top: auto; 
+        margin-bottom: auto; 
+        margin-left: auto; 
+        margin-right: auto; 
+        border-radius: 5rem;
+        height: fit-content;
+        overflow: hidden;
+        padding: auto;
+        background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
+        color:#ffffff; 
+        font-weight:normal;
+        font-size: clamp(0.1rem, 1.5vw, 1rem);
+        
+    }
+    .navBar:hover
+    {
+         box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+         background-image: none;
+         background-color: #1b1b1b;
+    }
+    .navMenu
+    {
+        display: flex;
+        list-style-type: none;
+        white-space: nowrap;
+        
+    }
+    
+    .navMItems
+    {
+        float: left;
+        list-style-position: inside;
+        padding-right:2rem;
+    }
+    .navMItemLast
+    {
+        padding-right:2rem;
+       
+    }
+    .navLink
+    {
+        text-decoration: none; 
+        color: #ffffff;
+        text-size-adjust: inherit;
+    }
+    .navLink:hover
+    {
+        color: antiquewhite;
+        text-decoration-line: overline;
+    }
+    .activeTab
+    {
+       font-weight: bold;
+    }
+    .navbutton
+    {
+        display: flex;
+        border-radius: 3rem;
+        padding: clamp(0.2rem, 1.15vw, 1.5rem);
+        justify-content: center;
+        height: fit-content;
+        overflow: hidden;
+        align-items: center;
+        background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
+        color: antiquewhite;
+        font-weight:normal;
+        font-size: clamp(0.1rem, 1vw, 0.7rem);
+        
+    }
+    .navbutton:hover
+    {
+        color: antiquewhite;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        background-color: #1b1b1b;
+        background-image: none;
+    }
+    .login
+    {
+      display: flex;
+      flex-direction: row;
+      gap: clamp(0.1rem, 0.3rem, 0.5rem);
+      justify-content: center;
+      height: fit-content;
+      font-size: clamp(0.2rem, 1.5vw, 1rem);
+    }
+    @media (max-width:768px)
+    {
+     .login
+     {
+        padding-top: 0.5rem;
+     }
+     .navBar
+     {
+        flex-flow: column wrap;
+        text-align: center;
+        min-width:fit-content;
+     }
+     .navSection
+     {
+        gap: clamp(0.2rem,3vw,6rem);
+     }
+    }
+    .heroSection
+    {
+        padding: 5rem;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow:hidden;
+        flex-wrap: wrap;
+        gap: clamp(0.2rem,20vw,28rem);
+    }
+    
+    .heroHeading
+    {
+        font-size: clamp(0.7rem,2vw,3rem);
+        color: #1b1b1b;
+        font-weight:1000;
+        padding: 0px;
+        margin: 0px;
+        max-width: 28vw;
+        
+    }
+    .heroText
+    { 
+        justify-content: left;
+        max-width:60%;
+        max-height: 30vw;
+        margin: 0px;
+        padding: 0px;
+    }
+    .heroDetail
+    {
+        color: #45108a;
+        max-width: 27vw;
+    }
+    .heroImage
+    {  
+        justify-content: right;
+        max-width: 36%;
+        max-height: 25vw;
+        width:420px; 
+        height:220px;
+    }
+    .heroButton
+    {
+        display: flex;
+        border-radius: 3rem;
+        padding: clamp(0.2rem, 1vw, 1.5rem);
+        justify-content: center;
+        height: fit-content;
+        max-width:fit-content;
+        overflow: hidden;
+        align-items: center;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        background-color: #1b1b1b;
+        color: antiquewhite;
+        background-image: none;
+        font-weight:normal;
+        font-size: clamp(0.1rem, 1vw, 0.7rem);
+        
+    }
+    .heroButton:hover
+    {
+        background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
+        color: antiquewhite;
+        
+    }
+    @media (max-width:768px)
+    {
+    .heroSection
+    {
+        padding: 2rem;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-self: center;
+        overflow:hidden;
+        flex-wrap: wrap;
+        gap: clamp(0.2rem,2vw,8rem);
+    }
+    .heroText
+    {
+        max-height: fit-content;
+        max-width: 55%;
+        justify-content: center;
+    }
+    .heroHeading
+    {
+    max-width: 27vw;
+    }
+    .heroDetail
+    {
+        font-size: clamp(0.1rem, 1.5vw, 1rem);
+        padding: 0px;
+        margin: 0px;
+        max-width: 28vw;
+    }
+    .heroImage
+    {
+       justify-content: right;
+        max-width: 50%;
+        max-height: 28vw;
+        width:250px; 
+        height:150px; 
+    }
+     .heroButton
+    {
+        border-radius: 3rem;
+        padding: clamp(0.2rem, 1vw, 1.5rem);
+        font-size: clamp(0.1rem, 1vw, 0.7rem);
+    }
+    }
