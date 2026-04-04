@@ -7,14 +7,14 @@
 }
 .header
 {
-   background-color: antiquewhite;
+   background-color: ivory;
    border-radius: 1rem;
-   width: 96vw;
    margin: 0px;
+   max-width: 90%;
    padding-top: 1.2rem;
    padding-bottom: 1.2rem;
-   padding-left: clamp(1rem,1.5vw,2rem);
-   padding-right: clamp(1rem,1.5vw,2rem);
+   padding-left: clamp(0.2rem,5vw,8rem);
+   padding-right: clamp(0.2rem,5vw,8rem);
 
 }
 
@@ -67,7 +67,7 @@
         overflow: hidden;
         padding: auto;
         background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
-        color:#ffffff; 
+        color:whitesmoke 
         font-weight:normal;
         font-size: clamp(0.1rem, 1.5vw, 1rem);
         
@@ -100,7 +100,7 @@
     .navLink
     {
         text-decoration: none; 
-        color: #ffffff;
+        color: whitesmoke;
         text-size-adjust: inherit;
     }
     .navLink:hover
@@ -122,7 +122,7 @@
         overflow: hidden;
         align-items: center;
         background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
-        color: antiquewhite;
+        color: whitesmoke
         font-weight:normal;
         font-size: clamp(0.1rem, 1vw, 0.7rem);
         
@@ -160,18 +160,60 @@
         gap: clamp(0.2rem,3vw,6rem);
      }
     }
+
+    .bodyStyle
+    {
+        background-color: antiquewhite;
+        border-radius: 1rem;
+        justify-self: center;
+        width: 100vw;
+        margin: 0px;
+        padding: 0%;
+        padding-bottom: 1.2rem;
+    }
+    .container
+    {
+       display: grid;
+       justify-self: center;
+       margin-top: clamp(0.2rem,2.4285%,5rem);
+       row-gap:clamp(0.2rem,2.5vh,4rem);
+       column-gap: clamp(0.2rem,1.2vh,2rem);
+       grid-template-columns: clamp(0.2rem,5vw,8rem) auto clamp(0.2rem,5vw,8rem);
+    }
+    @media (min-width:1024px)
+    {
+        .container
+        {
+           row-gap:clamp(0.5rem,6vh,4rem); 
+        }
+
+    }
+    .firstSection
+    {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
     .heroSection
     {
-        padding: 5rem;
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        overflow:hidden;
-        flex-wrap: wrap;
-        gap: clamp(0.2rem,20vw,28rem);
+       
+        padding: 0%;
+        display: grid;
+        margin-top: clamp(0.2rem,1.2vh,2rem);
+        grid-template-columns: auto  auto ;
+        column-gap: auto;
+        max-height: max-content;
     }
-    
-    .heroHeading
+    .heroText
+    { 
+        grid-column: 1/2;
+        grid-row: 1/1;
+        justify-self: left;
+        justify-content: left;
+        max-height: max-content;
+        margin: 0px;
+        padding: 0px;
+    }
+        .heroHeading
     {
         font-size: clamp(0.7rem,2vw,3rem);
         color: #1b1b1b;
@@ -181,14 +223,6 @@
         max-width: 28vw;
         
     }
-    .heroText
-    { 
-        justify-content: left;
-        max-width:60%;
-        max-height: 30vw;
-        margin: 0px;
-        padding: 0px;
-    }
     .heroDetail
     {
         color: #45108a;
@@ -196,11 +230,12 @@
     }
     .heroImage
     {  
-        justify-content: right;
-        max-width: 36%;
-        max-height: 25vw;
-        width:420px; 
-        height:220px;
+        grid-column: 2/2;
+        grid-row: 1/1;
+        justify-self: right;
+        max-height: fit-content;
+        width:clamp(240px,10vw,500px); 
+        height:clamp(100px,8vh,220px);
     }
     .heroButton
     {
@@ -230,21 +265,13 @@
     {
     .heroSection
     {
-        padding: 2rem;
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        justify-self: center;
-        overflow:hidden;
-        flex-wrap: wrap;
+       
         gap: clamp(0.2rem,2vw,8rem);
     }
     .heroText
     {
         max-height: fit-content;
-        max-width: 55%;
-        justify-content: center;
+        justify-self: left;
     }
     .heroHeading
     {
@@ -253,17 +280,13 @@
     .heroDetail
     {
         font-size: clamp(0.1rem, 1.5vw, 1rem);
-        padding: 0px;
-        margin: 0px;
         max-width: 28vw;
     }
     .heroImage
     {
-       justify-content: right;
-        max-width: 50%;
-        max-height: 28vw;
-        width:250px; 
-        height:150px; 
+       justify-self: right;
+        width:clamp(100px,10vw,220px); 
+        height:clamp(60px,8vw,100px); 
     }
      .heroButton
     {
@@ -273,65 +296,89 @@
     }
     }
 
-    .bodyStyle
-    {
-        background-color: antiquewhite;
-        border-radius: 1rem;
-        width: 96vw;
-        margin: 0px;
-    }
     .servicesSection
     {
-        display:flex;
-        justify-items: center;
-        overflow:hidden;
-        flex-wrap: wrap;
-        gap: clamp(0.2rem,20vw,28rem);
+        grid-row: 2/2;
+        grid-column: 2/3;
     }
     .generalHeading
     {
 
-        padding-left: clamp(0.5rem,12vw,12rem);
-        padding-right: clamp(0.5rem,12vw,12rem);
         font-size: clamp(0.5rem,1.5vw,2rem);
-        font-weight: bold;
+        font-size: clamp(0.7rem,2vw,3rem);
         color: #1b1b1b;
+        font-weight:bold;
+        padding: 0px;
         margin: 0px;
         max-width: 28vw;
         
     }
     .generalDetail
     {
-        padding-left: clamp(0.5rem,12vw,12rem);
-        padding-right: clamp(0.5rem,12vw,12rem);
         font-size: clamp(0.1rem, 1.5vw, 1rem);
+         color: #45108a;
         max-width: 27vw;
-        color: #45108a;
     }
 
     .servicesCard
     {
-     
      display: grid;
-     max-width: 90%;
-     margin-left: clamp(0.5rem,12vw,12rem);
-     margin-right: clamp(0.5rem,12vw,12rem);
+     /* justify-self: center; */
+     margin-top: clamp(0.2rem,1.2vh,2rem);
      row-gap:clamp(0.2rem,1.2vh,2rem);
-     background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
+     column-gap: clamp(0.2rem,1.2vh,2rem);
+     grid-template-columns: clamp(5rem, 10vw,12rem)  auto ;
     }
     .servicesHeading
     {
-        color:antiquewhite;
+        color:whitesmoke;
+        font-size: clamp(0.2rem, 1.5vw, 1.2rem);
+        font-weight: bold;
         
+    }
+    .servicesDetail
+    {
+        font-size: clamp(0.1rem, 1.5vw, 1rem);
+        font-weight: normal;
+        color: antiquewhite;
+        margin-top:clamp(0.2rem,0.8vh,1rem);
+    }
+    .imageBox
+    {
+        display: flex;
+        align-items: center;
+        width: clamp(5rem, 10vw,12rem);
+        height: clamp(5rem, 10vw,12rem); 
+        background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
     }
     .serviceImage
     {
+        width: clamp(4rem, 8vw,11rem);
+        height: clamp(4rem, 8vw,11rem);  
+        justify-self: center;
         background-color: aliceblue;
-        width: clamp(5rem, 10vw,12rem);
-        height: clamp(5rem, 10vh,12rem);
+        margin: clamp(0.2rem,1vw,1rem); ;
     }
-    .brandingCard
+    .servicesTextBox
     {
-        display: flex;
-        flex-direction: row;
+       
+       height: clamp(5rem, 10vw,12rem);
+       background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
+    }
+    .servicesText
+    {
+   
+      padding: clamp(0.5rem,1.2vw,2rem);
+      align-content: center;
+    
+    }
+    .brandingImage
+    {      
+        grid-column: 1/2;
+        grid-row: 1/1;
+    }
+    .brandingText
+    {
+        grid-column: 2/2;
+        grid-row: 1/1;
     }
