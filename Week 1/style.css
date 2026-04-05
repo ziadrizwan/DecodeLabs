@@ -7,7 +7,7 @@
 }
 .header
 {
-   background-color: ivory;
+   background-color: #1b1b1b;
    border-radius: 1rem;
    margin: 1.2vh;
    max-width: 96%;
@@ -75,7 +75,7 @@
     {
          box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
          background-image: none;
-         background-color: #1b1b1b;
+         background-color: whitesmoke;
     }
     .navMenu
     {
@@ -104,8 +104,12 @@
     }
     .navLink:hover
     {
-        color: antiquewhite;
+        color: #45108a;
         text-decoration-line: overline;
+    }
+    .navSection:has(.navBar:hover) .navLink
+    {
+        color: #45108a;
     }
     .activeTab
     {
@@ -128,9 +132,9 @@
     }
     .navbutton:hover
     {
-        color: antiquewhite;
+        color: #45108a;
         box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-        background-color: #1b1b1b;
+        background-color: whitesmoke;
         background-image: none;
     }
     .login
@@ -385,9 +389,7 @@
     .servicesText
     {
    
-      padding: clamp(0.5rem,1.2vw,2rem);
-      align-content: center;
-    
+      padding: clamp(0.5rem,1vw,1.5rem);  
     }
     .leftImage
     {      
