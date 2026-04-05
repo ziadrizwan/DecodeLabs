@@ -9,8 +9,8 @@
 {
    background-color: ivory;
    border-radius: 1rem;
-   margin: 0px;
-   max-width: 90%;
+   margin: 1.2vh;
+   max-width: 96%;
    padding-top: 1.2rem;
    padding-bottom: 1.2rem;
    padding-left: clamp(0.2rem,5vw,8rem);
@@ -28,7 +28,7 @@
         justify-self: center;
         overflow:hidden;
         flex-wrap: wrap;
-        gap: clamp(0.2rem,10vw,14rem);
+        gap: clamp(0.2rem,6vw,14rem);
     }
     @media (min-width:768px){
         .navSection
@@ -44,8 +44,7 @@
         {
         align-content: center;
         background-color: #7600bc;
-        color: antiquewhite;
-        font-weight: bold;
+        color: whitesmoke;
         }
     }
         
@@ -67,8 +66,8 @@
         overflow: hidden;
         padding: auto;
         background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
-        color:whitesmoke 
-        font-weight:normal;
+        color:whitesmoke; 
+        font-weight :normal;
         font-size: clamp(0.1rem, 1.5vw, 1rem);
         
     }
@@ -122,7 +121,7 @@
         overflow: hidden;
         align-items: center;
         background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
-        color: whitesmoke
+        color: whitesmoke;
         font-weight:normal;
         font-size: clamp(0.1rem, 1vw, 0.7rem);
         
@@ -159,6 +158,12 @@
      {
         gap: clamp(0.2rem,3vw,6rem);
      }
+      .navbutton
+        {
+        align-content: center;
+        background-color: #7600bc;
+        color: whitesmoke;
+        }
     }
 
     .bodyStyle
@@ -166,7 +171,7 @@
         background-color: antiquewhite;
         border-radius: 1rem;
         justify-self: center;
-        width: 100vw;
+        width: 98vw;
         margin: 0px;
         padding: 0%;
         padding-bottom: 1.2rem;
@@ -320,14 +325,22 @@
         max-width: 27vw;
     }
 
-    .servicesCard
+    .servicesCardLeft
     {
      display: grid;
-     /* justify-self: center; */
      margin-top: clamp(0.2rem,1.2vh,2rem);
      row-gap:clamp(0.2rem,1.2vh,2rem);
-     column-gap: clamp(0.2rem,1.2vh,2rem);
+     column-gap: clamp(0.2rem,0.6vh,1rem);
      grid-template-columns: clamp(5rem, 10vw,12rem)  auto ;
+    }
+    
+    .servicesCardRight
+    {
+     display: grid;
+     margin-top: clamp(0.2rem,1.2vh,2rem);
+     row-gap:clamp(0.2rem,1.2vh,2rem);
+     column-gap: clamp(0.2rem,0.6vh,1rem);
+     grid-template-columns: clamp( auto 5rem, 10vw,12rem);
     }
     .servicesHeading
     {
@@ -340,29 +353,33 @@
     {
         font-size: clamp(0.1rem, 1.5vw, 1rem);
         font-weight: normal;
-        color: antiquewhite;
-        margin-top:clamp(0.2rem,0.8vh,1rem);
+        color: whitesmoke;
+        margin: 0px;
+        max-width: 50vw;
     }
     .imageBox
     {
         display: flex;
         align-items: center;
+        justify-content: center;
+        border-radius: clamp(0.2rem,0.2vw,2rem);
+        object-fit: contain; 
         width: clamp(5rem, 10vw,12rem);
         height: clamp(5rem, 10vw,12rem); 
-        background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
     }
     .serviceImage
     {
-        width: clamp(4rem, 8vw,11rem);
-        height: clamp(4rem, 8vw,11rem);  
-        justify-self: center;
+        max-width: 100%;
+        max-height: auto;
+        object-fit: cover;
         background-color: aliceblue;
-        margin: clamp(0.2rem,1vw,1rem); ;
+        
     }
     .servicesTextBox
     {
        
        height: clamp(5rem, 10vw,12rem);
+       border-radius: clamp(0.2rem,0.3vw,2rem);
        background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
     }
     .servicesText
@@ -372,13 +389,34 @@
       align-content: center;
     
     }
-    .brandingImage
+    .leftImage
     {      
         grid-column: 1/2;
         grid-row: 1/1;
+        outline: #45108a 5px solid;
+        outline-offset: -5px;
     }
-    .brandingText
+    .leftwardText
     {
         grid-column: 2/2;
         grid-row: 1/1;
+    }
+     .rightImage
+    {      
+        grid-column: 2/2;
+        grid-row: 1/1;
+        outline: #1b1b1b 5px solid;
+        outline-offset: -5px;
+    }
+    .righwardText
+    {
+        grid-column: 1/2;
+        grid-row: 1/1;
+    }
+     .servicesTextBoxRight
+    {
+       
+       height: clamp(5rem, 10vw,12rem);
+       border-radius: clamp(0.2rem,0.3vw,2rem);
+       background-color: #1b1b1b;
     }
