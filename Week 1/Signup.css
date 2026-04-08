@@ -1,0 +1,88 @@
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight:600;
+}
+.bodyStyle
+{        
+        background-color: antiquewhite;
+        border-radius: 1rem;
+        justify-self: center;
+        width: 98vw;
+        margin: 0px;
+        padding: 0%;
+        padding-top: 1.2rem;
+}
+
+.container
+{
+       display: grid;
+       justify-self: center;
+       margin-top: clamp(0.2rem,2.4285%,5rem);
+       row-gap:clamp(0.2rem,2.5vh,4rem);
+       column-gap: clamp(0.2rem,1.2vh,2rem);
+       grid-template-columns: clamp(0.2rem,5vw,8rem) auto clamp(0.2rem,5vw,8rem);
+}
+.logoSection
+{
+        grid-column: 2/3;
+        grid-row: 1/1;
+}
+.mainLogo
+{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: clamp(0.2rem,0.7vw,2rem);
+        padding: clamp(0.2rem,0.5vw,2rem);
+        object-fit: contain; 
+        width: clamp(0.5rem, 2.5vw,4rem);
+        height: clamp(0.5rem, 2.5vw,4rem); 
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        background-color: #1b1b1b;
+}
+.logoImage
+{
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+}
+
+.mainHeading
+{
+color: #1b1b1b;
+}
+
+.mainDetail
+{
+    max-width: 50vw;
+    color: #45108a;
+}
+   .homeButton
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: clamp(0.2rem,0.7vw,2rem);
+        padding: clamp(0.2rem,0.5vw,2rem);
+        object-fit: contain; 
+        width: clamp(0.5rem, 2.5vw,4rem);
+        height: clamp(0.5rem, 2.5vw,4rem); 
+        color: #45108a;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        background-color: #1b1b1b;
+        background-image: none;
+        
+    }
+    .homeIcon
+    {
+        /* max-width: 100%;
+        max-height: auto; */
+        object-fit: cover;
+    }
+    .homeButton:hover
+    {
+        background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
+    }
