@@ -7,29 +7,41 @@
 }
 .bodyStyle
 {        
-        background-color: antiquewhite;
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        background-position:center;
+        background-size: cover;
+        min-height: 100vh;
         border-radius: 1rem;
         justify-self: center;
         width: 98vw;
         margin: 0px;
         padding: 0%;
-        padding-top: 1.2rem;
+        padding-top: 1rem;
 }
 
 .container
 {
        display: grid;
        justify-self: center;
-       margin-top: clamp(0.2rem,2.4285%,5rem);
+       margin-top: clamp(0.2rem,2%,4rem);
        row-gap:clamp(0.2rem,2.5vh,4rem);
        column-gap: clamp(0.2rem,1.2vh,2rem);
-       grid-template-columns: clamp(0.2rem,5vw,8rem) auto clamp(0.2rem,5vw,8rem);
+       grid-template-columns: clamp(10rem,25vw,30rem) auto clamp(10rem,25vw,30rem);
+}
+@media(max-width:760px)
+{
+    .container
+    {
+        grid-template-columns: clamp(3rem,2vw,12rem) auto clamp(3rem,2vw,12rem);
+    }
+    
 }
 .logoSection
 {
         grid-column: 2/3;
-        grid-row: 1/1;
+        grid-row: 1/2;
 }
+
 .mainLogo
 {
         display: flex;
@@ -38,10 +50,14 @@
         border-radius: clamp(0.2rem,0.7vw,2rem);
         padding: clamp(0.2rem,0.5vw,2rem);
         object-fit: contain; 
-        width: clamp(0.5rem, 2.5vw,4rem);
-        height: clamp(0.5rem, 2.5vw,4rem); 
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        width: clamp(1.2rem, 2.5vw,4rem);
+        height: clamp(1.2rem, 2.5vw,4rem); 
         background-color: #1b1b1b;
+}
+.mainLogo:hover
+{
+    background-color: #494949;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
 }
 .logoImage
 {
@@ -53,36 +69,99 @@
 .mainHeading
 {
 color: #1b1b1b;
+margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
 }
 
 .mainDetail
 {
-    max-width: 50vw;
+    max-width: 90vw;
     color: #45108a;
+    margin:clamp(0.2rem,1%,1rem) 0 clamp(0.2rem,1%,1rem) 0;
 }
-   .homeButton
-    {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: clamp(0.2rem,0.7vw,2rem);
-        padding: clamp(0.2rem,0.5vw,2rem);
-        object-fit: contain; 
-        width: clamp(0.5rem, 2.5vw,4rem);
-        height: clamp(0.5rem, 2.5vw,4rem); 
-        color: #45108a;
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-        background-color: #1b1b1b;
-        background-image: none;
-        
-    }
-    .homeIcon
-    {
-        /* max-width: 100%;
-        max-height: auto; */
-        object-fit: cover;
-    }
-    .homeButton:hover
-    {
-        background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
-    }
+.signupForm
+{
+    grid-column: 2/3;
+    grid-row: 2/2;
+    text-align: center;
+    width: 100%;
+    background-color: #1b1b1b;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius:clamp(0.5rem,1.5vw,4rem);
+    padding: clamp(0.2rem,3vw,10rem) 0 clamp(0.2rem,3vw,10rem) 0;
+}
+.formGrid
+{
+    display: grid;
+    grid-template-columns: clamp(0.2rem,5vw,10rem) auto clamp(0.2rem,5vw,10rem);
+    column-gap: clamp(0.5rem,1vw,1rem);
+}
+.formMaterial
+{
+    grid-column: 2/3;
+}
+
+.signupForm h1
+{
+    color: #A56DEE;
+    font-size: clamp(1rem,2.5vw,3rem);
+    margin:0 0 clamp(0.2rem,1vh,1.5rem) 0;
+    
+     
+}
+.signupForm .underline
+{
+ background-color: #A56DEE;
+ width: clamp(1rem,2.5vw,10rem);
+ height: clamp(0.2rem,0.4vw,1rem);
+ justify-self: center;
+ margin : auto;
+ margin-bottom: clamp(2rem,2.5vh,8rem);
+ border-radius:clamp(0.2rem,1vw,2rem) ;
+}
+.textField
+{
+    display: flex;
+    border-color: #721BE4;
+    border-radius: clamp(0.5rem,8vw,12rem);
+    padding: clamp(0.5rem,1vw,2rem);
+    margin-bottom: clamp(2rem,2.5vh,8rem);
+    object-fit: contain; 
+    background-color:#A56DEE;
+}  
+.textField input
+{
+    background: transparent;
+    margin-left: clamp(0.2rem,1vw,2rem);
+    color: #45108a;
+    border: 0;
+    outline: 0;
+    width: 100%;
+
+}
+.textField input::placeholder
+{
+    color: #45108a;
+    opacity: 80%;
+}
+   .fieldLogo 
+{
+    width: clamp(1rem,0.9vw,3rem);
+    height: auto;
+    object-fit: cover;
+    opacity: 80%;
+} 
+.passwordSuggestion
+{
+    justify-self: left;
+    color: #A56DEE;
+    font-style: normal;
+    font-size: clamp(0.5rem,0.9vw,1rem);
+    font-weight: normal;
+}
+.passwordSuggestion a
+{
+    text-decoration: none;
+    font-style:normal;
+    font-weight: light;
+    color: aliceblue;
+}
