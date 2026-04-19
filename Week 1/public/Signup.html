@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigup</title>
+    <link rel="stylesheet" href="./Signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Assets/Zizo_graphic_New_Logo.svg" type="image/x-icon">
+</head>
+<body class="bodyStyle montserrat-font">
+    <div class="container">
+       <div class="logoSection">
+          <a class="mainLogo" href="./HomePage.html" target="">
+             <img class="logoImage" src="./Assets/Zizo_graphic_New_Logo.svg" alt="">
+          </a> 
+          <h1 class="mainHeading">Get started on Zizo Graphics</h1>
+          <p class="mainDetail">Create an account to connect with our experts and discover courses and training regarding Graphic Designing or pick our designing services for your interests.</p>
+       </div> 
+     <form class="signupForm formGrid" action="">
+      <div id="formInner" class="formMaterial">
+        <h1>Sign Up</h1>
+        <div class="underline"></div>
+        
+        <div class="textField">
+         <img class="fieldLogo" src="./Assets/user-name-icon.svg" alt="">
+         <input id="nameField" type="text" required 
+         placeholder="Name"
+         >
+        </div>
+
+        <div class="textField">
+         <img class="fieldLogo" src="./Assets/email-icon.svg" alt="">
+         <input id="emailField" type="email" required 
+         placeholder="Email Adress"
+         >
+        </div>
+
+        <div class="textField">
+         <img class="fieldLogo" src="./Assets/key-minimalistic-square-icon.svg" alt="">
+         <input id="passwordField" type="password" required 
+         placeholder="Password"
+         >
+        </div>
+         
+        <div id="passwordSuggestions" class="passwordSuggestion">
+          <p class="passCheck">Password Suggestion</p>
+          <div>
+            <div id="lengthRule" class="invalid">
+            <img id="lengthIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Length is between 8 to 16 characters</p>  
+           </div>
+           <div id="upperRule" class="invalid">
+            <img id="upperIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Minimum 1 upperCase letter (A-Z)</p>  
+           </div>
+           <div id="lowerRule" class="invalid">
+            <img id="lowerIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Minimum 1 lowerCase letter (a-z)</p>  
+           </div>
+           <div id="numberRule" class="invalid">
+            <img id="numericIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Minimum 1 numeric character (0-9)</p>  
+           </div>
+           <div id="specialRule" class="invalid">
+            <img id="specialIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Minimum 1 special character (!@#$%^&*)</p>  
+           </div>
+            <div id="strengthDiv" class="weak">
+                <img id="strengthIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+                <p id="passwordStrength" class="passRule">Weak Password</p> 
+            </div>
+          </div>
+        </div>
+
+        <div id="confirmPasswordDiv" class="textField hiddenTag">
+         <img class="fieldLogo" src="./Assets/key-minimalistic-square-icon.svg" alt="">
+         <input id="confirmPasswordField" type="password" required 
+         placeholder="Confirm Password"
+         >
+        </div> 
+
+        <a class="buttonText" href="./Signup.html">
+            <div class="signupButton">Signup</div>
+        </a>  
+        
+      </div>  
+     </form>
+    </div>
+  <script src="./signUp.js"></script>  
+</body>
+</html>
