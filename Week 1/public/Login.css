@@ -1,0 +1,328 @@
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight:600;
+}
+.textField input:-webkit-autofill,
+.textField input:-webkit-autofill:active, 
+.text input:-webkit-autofill:not(:focus)
+{
+    -webkit-box-shadow: 0 0 0 1000px #A56DEE inset;
+    -webkit-text-fill-color: #45108a;
+}
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:not(:empty),
+.input:-webkit-autofill:active, 
+.input:-webkit-autofill:not(:focus)
+{
+    -webkit-box-shadow: 0 0 0 1000px #f0f8ff inset;
+    -webkit-text-fill-color: #45108a;
+}
+.textField input:-webkit-autofill:active, 
+.text input:-webkit-autofill:not(:focus)
+ {
+    -webkit-box-shadow: 0 0 0 1000px #f0f8ff inset;
+    -webkit-text-fill-color: #45108a;
+}
+.bodyStyle
+{        
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        background-position:center;
+        background-size: cover;
+        min-height: 100vh;
+        border-radius: 1rem;
+        justify-self: center;
+        width: 98vw;
+        margin: 0px;
+        padding: 0%;
+        padding-top: 1rem;
+}
+
+.container
+{
+       display: grid;
+       justify-self: center;
+       margin-top: clamp(0.2rem,2%,4rem);
+       row-gap:clamp(0.2rem,2.5vh,4rem);
+       column-gap: clamp(0.2rem,1.2vh,2rem);
+       grid-template-columns: clamp(10rem,25vw,30rem) auto clamp(10rem,25vw,30rem);
+}
+@media(max-width:760px)
+{
+    .container
+    {
+        grid-template-columns: clamp(3rem,2vw,12rem) auto clamp(3rem,2vw,12rem);
+    }
+    
+}
+.logoSection
+{
+        grid-column: 2/3;
+        grid-row: 1/2;
+}
+
+.mainLogo
+{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: clamp(0.2rem,0.7vw,2rem);
+        padding: clamp(0.2rem,0.5vw,2rem);
+        object-fit: contain; 
+        width: clamp(1.2rem, 2.5vw,4rem);
+        height: clamp(1.2rem, 2.5vw,4rem); 
+        background-color: #1b1b1b;
+}
+.mainLogo:hover
+{
+    background-color: #494949;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+.logoImage
+{
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+}
+
+.mainHeading
+{
+color: #1b1b1b;
+margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
+}
+
+.mainDetail
+{
+    max-width: 90vw;
+    color: #45108a;
+    margin:clamp(0.2rem,1%,1rem) 0 clamp(0.2rem,1%,1rem) 0;
+}
+.loginForm
+{
+    grid-column: 2/3;
+    grid-row: 2/2;
+    text-align: center;
+    width: 100%;
+    background-color: #1b1b1b;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    border-radius:clamp(0.5rem,1.5vw,4rem);
+    padding: clamp(0.2rem,3vw,10rem) 0 clamp(0.2rem,3vw,10rem) 0;
+}
+.formGrid
+{
+    display: grid;
+    grid-template-columns: clamp(0.2rem,5vw,10rem) auto clamp(0.2rem,5vw,10rem);
+    column-gap: clamp(0.5rem,1vw,1rem);
+}
+.formMaterial
+{
+    grid-column: 2/3;
+}
+
+.loginForm h1
+{
+    color: #721BE4;
+    font-weight: 600;
+    font-size: clamp(1rem,2.5vw,3rem);
+    margin:0 0 clamp(0.2rem,1vh,1.5rem) 0;
+    
+     
+}
+.loginForm .underline
+{
+ background-color: #721BE4;
+ width: clamp(1rem,2.5vw,10rem);
+ height: clamp(0.2rem,0.35vw,1rem);
+ justify-self: center;
+ margin : auto;
+ margin-bottom: clamp(2rem,2.5vh,8rem);
+ border-radius:clamp(0.2rem,1vw,2rem) ;
+}
+.errorPop
+{
+    display: none;
+    color: #f0f8ff;
+    font-style: normal;
+    font-size: clamp(0.2rem,0.7vw,0.9rem);
+    font-weight: normal;
+    margin-bottom: clamp(1rem,1.9vh,6rem);
+}
+.errorPopActive
+{
+    display: block;
+    color: #f0f8ff;
+    font-style: normal;
+    font-size: clamp(0.2rem,0.7vw,0.9rem);
+    font-weight: normal;
+    margin-bottom: clamp(1rem,1.9vh,6rem);
+}
+.signupLink
+{
+    text-decoration: none;
+    justify-self: left;
+    font-style: normal;
+    font-size: clamp(0.2rem,0.7vw,0.9rem);
+    font-weight: bold;
+    color: #f0f8ff;
+    
+}
+.signupLinkOuter
+{
+   margin-bottom: 0;
+}
+.textField
+{
+    display: flex;
+    border-color: #721BE4;
+    border-radius: clamp(0.5rem,8vw,12rem);
+    padding: clamp(0.5rem,1vw,2rem);
+    margin-bottom: clamp(2rem,2.5vh,8rem);
+    object-fit: contain; 
+    background-color:#A56DEE;
+}
+.textField:hover
+{
+    background-color: #f0f8ff;
+}
+.textField:focus
+{
+    background-color: #f0f8ff;
+}
+.textField:focus-within
+{
+    display: flex;
+    border-color: #721BE4;
+    border-radius: clamp(0.5rem,8vw,12rem);
+    padding: clamp(0.5rem,1vw,2rem);
+    margin-bottom: clamp(2rem,2.5vh,8rem);
+    object-fit: contain; 
+    background-color:#f0f8ff;
+}  
+.textField input
+{
+    background: transparent;
+    margin-left: clamp(0.2rem,1vw,2rem);
+    color: #45108a;
+    border: 0;
+    outline: 0;
+    width: 100%;
+
+}
+.textField input::placeholder
+{
+    color: #45108a;
+    opacity: 80%;
+}
+
+.textField input:autofill
+{
+    background: transparent;
+    margin-left: clamp(0.2rem,1vw,2rem);
+    color: #45108a;
+    border: 0;
+    outline: 0;
+    width: 100%;
+}
+   .fieldLogo 
+{
+    width: clamp(1rem,0.9vw,3rem);
+    height: auto;
+    object-fit: cover;
+    opacity: 80%;
+} 
+
+
+.passRule
+{
+    padding: 0;
+    margin: 0;
+    align-self: center;
+}
+.passLogo
+{
+    padding: clamp(0.2rem,0.5vw,1rem);
+    width: clamp(0.2rem,0.9vw,1rem);
+    height: auto;
+    object-fit: cover;
+}
+
+.invalid
+{
+    display: flex;
+    justify-self: left;
+    object-fit: contain;
+    color: #A56DEE;
+    font-style: normal;
+    font-size: clamp(0.2rem,0.7vw,0.9rem);
+    font-weight: normal;
+}
+.valid
+{
+    display: flex;
+    justify-self: left;
+    object-fit: contain;
+    color: #f0f8ff;
+    font-style: normal;
+    font-size: clamp(0.2rem,0.7vw,0.9rem);
+    font-weight: normal;   
+}
+.hiddenTag
+{
+    display: none;
+}
+.loginButton
+    {
+        background: transparent;
+        border: none;
+        border-radius: 3rem;
+        padding: clamp(0.2rem, 1.15vw, 1.5rem);
+        justify-self: center; 
+        justify-content: center;
+        height: fit-content;
+        overflow: hidden;
+        align-items: center;
+        color: #f0f8ff;
+        font-weight:normal;
+        font-size: clamp(0.1rem, 1vw, 0.7rem);
+        
+    }
+    .buttonOuter
+    {
+        display: flex;
+        border-radius: 3rem;
+        margin-top: clamp(0.2rem, 1.15vw, 1.5rem);
+        justify-self: center; 
+        justify-content: center;
+        height: fit-content;
+        overflow: hidden;
+        align-items: center;
+        background-color: #45108a;
+        color: #f0f8ff;
+        font-weight:normal;
+        font-size: clamp(0.1rem, 1vw, 0.7rem);
+        
+    }
+    
+    .buttonOuter:hover .loginButton
+    {
+        background:transparent;
+        color: #45108a;
+    }
+    .buttonOuter:hover
+    {
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        background-color: aliceblue;
+        color: #45108a;
+    }
+    
+    @media (max-width:768px)
+    {
+        .signupButton
+        {
+        align-content: center;
+        background-color: #45108a;
+        color: aliceblue;
+        }
+    }

@@ -19,28 +19,30 @@
           <h1 class="mainHeading">Get started on Zizo Graphics</h1>
           <p class="mainDetail">Create an account to connect with our experts and discover courses and training regarding Graphic Designing or pick our designing services for your interests.</p>
        </div> 
-     <form class="signupForm formGrid" action="">
+     <form id="signupForm"  class="signupForm formGrid">
       <div id="formInner" class="formMaterial">
         <h1>Sign Up</h1>
         <div class="underline"></div>
         
+        <div id="error-message" class="errorPop"></div>
+
         <div class="textField">
          <img class="fieldLogo" src="./Assets/user-name-icon.svg" alt="">
-         <input id="nameField" type="text" required 
+         <input id="nameField" type="text" name="username" required 
          placeholder="Name"
          >
         </div>
 
         <div class="textField">
          <img class="fieldLogo" src="./Assets/email-icon.svg" alt="">
-         <input id="emailField" type="email" required 
+         <input id="emailField" type="email" name="email" required 
          placeholder="Email Adress"
          >
         </div>
 
         <div class="textField">
          <img class="fieldLogo" src="./Assets/key-minimalistic-square-icon.svg" alt="">
-         <input id="passwordField" type="password" required 
+         <input id="passwordField" type="password" name="password" required 
          placeholder="Password"
          >
         </div>
@@ -75,17 +77,25 @@
           </div>
         </div>
 
-        <div id="confirmPasswordDiv" class="textField hiddenTag">
+        <div id="confirmPasswordDiv" class="textField confirmPasss hiddenTag">
          <img class="fieldLogo" src="./Assets/key-minimalistic-square-icon.svg" alt="">
          <input id="confirmPasswordField" type="password" required 
          placeholder="Confirm Password"
          >
         </div> 
+        <div id="passwordMatchDiv" class="invalid hiddenTag">
+                <img id="matchIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+                <p id="passwordMatch" class="passRule">Password is not matched</p> 
+        </div>
 
-        <a class="buttonText" href="./Signup.html">
-            <div class="signupButton">Signup</div>
-        </a>  
-        
+        <div class="buttonOuter">
+        <button type="submit" class="signupButton">
+          Signup
+        </button>
+        </div>
+        <p class="loginLinkOuter"> 
+           <a class=" loginLink" href="./Login.html"> Login to an existing account</a>
+        </p>
       </div>  
      </form>
     </div>
