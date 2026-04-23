@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="./editProfile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Assets/Zizo_graphic_New_Logo.svg" type="image/x-icon">
+</head>
+<body class="bodyStyle montserrat-font">
+    <div class="container"> 
+        <div class="topSection" >
+           <a href="./profile.html">
+           <div class="backButtonOuter">
+            <img class="backIcon" src="./Assets/back-icon.svg" alt="">
+           </div>
+          </a>
+          <h1 class="mainHeading">Profile options</h1>
+          <p class="mainDetail"> Customize your profile and be a part of us.</p>
+        </div>
+        <div class="profileCard secondSection">
+           <div class="imageFrame">
+            <img name="profilePicture" id="profilePic" src="./Assets/user-profile.svg" alt="Profile Picture" >
+           </div>
+             
+           <p class="profileLinkOuter"> 
+           <a id="changePicLink" class=" profileLink" href="#"> Change Profile Picture</a>
+           </p>
+           <input type="file" id="profileUpload" accept="image/*" class="profilePicUpload">
+
+        </div>
+
+        <div id="profileOptions" class="options">
+            <div id="changePassBtn" class="buttonSOuter">
+               <button class="buttonStyle" >Change Password</button>
+            </div>
+            <div id="deleteAccBtn" class="buttonSOuter">
+               <button class="buttonStyle">Delete Account</button>
+            </div>
+        </div>
+         <form id="passwordForm"  class="changePasswordForm hiddenTag">
+            
+            <div id="cancelButtonDiv" class=" cancelButton hiddenTag">
+                <div class="buttonOuter">
+                    <button id="cancelPasswordButton" class="changeButton">
+                       Cancel
+                     </button>
+                </div>
+             </div>
+            
+            <div id="newPassword" class="textField hiddenTag">
+               <img class="fieldLogo" src="./Assets/key-minimalistic-square-icon.svg" alt="">
+               <input id="passwordField" type="password" name="password" required 
+               placeholder="Password"
+               >
+            </div>
+            
+            <div id="passwordSuggestions" class="passwordSuggestion">
+               <p class="passCheck">Password Suggestion</p>
+               <div>
+            <div id="lengthRule" class="invalid">
+            <img id="lengthIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Length is between 8 to 16 characters</p>  
+           </div>
+           <div id="upperRule" class="invalid">
+            <img id="upperIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Minimum 1 upperCase letter (A-Z)</p>  
+           </div>
+           <div id="lowerRule" class="invalid">
+            <img id="lowerIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Minimum 1 lowerCase letter (a-z)</p>  
+           </div>
+           <div id="numberRule" class="invalid">
+            <img id="numericIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Minimum 1 numeric character (0-9)</p>  
+           </div>
+           <div id="specialRule" class="invalid">
+            <img id="specialIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+            <p class="passRule">Minimum 1 special character (!@#$%^&*)</p>  
+           </div>
+            <div id="strengthDiv" class="weak">
+                <img id="strengthIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+                <p id="passwordStrength" class="passRule">Weak Password</p> 
+            </div>
+               </div>
+             </div>
+
+             <div id="confirmPasswordDiv" class="textField confirmPasss hiddenTag">
+                <img class="fieldLogo" src="./Assets/key-minimalistic-square-icon.svg" alt="">
+                <input id="confirmPasswordField" type="password" required 
+                placeholder="Confirm Password"
+                >
+             </div> 
+             <div id="passwordMatchDiv" class="invalid hiddenTag">
+                <img id="matchIcon" class="passLogo" src="./Assets/cross-circle.svg"">
+                <p id="passwordMatch" class="passRule">Password is not matched</p> 
+             </div>
+        
+             <div id="changeButtonDiv" class=" hiddenTag">
+                <div class="buttonOuter">
+                    <button id="changePasswordButton" type="submit" class="changeButton">
+                       Change
+                     </button>
+                </div>
+             </div>
+         </form>
+        
+    </div>
+    <script src="./editProfile.js"></script>
+</body>
+</html>

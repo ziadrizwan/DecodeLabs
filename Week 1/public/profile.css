@@ -40,27 +40,41 @@
         grid-column: 2/3;
         grid-row: 1/2;
 }
+.logoutButtonOuter
+{
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        overflow: hidden;
+        align-items: center;border-radius: clamp(0.2rem,0.7vw,2rem);
+        margin-top: clamp(0.2rem, 1.15vw, 1.5rem);
+        padding: clamp(0.2rem,0.5vw,2rem);
+        width: clamp(1.2rem, 2.5vw,4rem);
+        height: clamp(1.2rem, 2.5vw,4rem); 
+        background-color: #1b1b1b;
+        
+}
+.logoutButtonOuter:hover
+{
+    background-color: #45108a;
+}
 
-.mainLogo
+.logoutButton
 {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: clamp(0.2rem,0.7vw,2rem);
-        padding: clamp(0.2rem,0.5vw,2rem);
         object-fit: contain; 
         width: clamp(1.2rem, 2.5vw,4rem);
         height: clamp(1.2rem, 2.5vw,4rem); 
-        background-color: #1b1b1b;
+        background: transparent;
+        border: none;
+        
+        
 }
-.mainLogo:hover
+.logoutIcon
 {
-    background-color: #494949;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-}
-.logoImage
-{
-    max-width: 100%;
+     max-width: 100%;
     max-height: auto;
     object-fit: cover;
 }
@@ -86,10 +100,11 @@ margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     border-radius:clamp(0.5rem,1.5vw,4rem);
     padding: clamp(0.2rem,3vw,10rem) 0 clamp(0.2rem,3vw,10rem) 0;
+    margin-bottom: clamp(1rem,1vh,4rem);
 }
 .imageFrame
 {
-    outline: #45108a 5px solid;
+    outline: #A56DEE 5px solid;
     outline-offset: -5px;
     max-width: 100%;
     max-height: auto;
@@ -99,46 +114,39 @@ margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
     align-content: center;
     width: 100px;
     height: 100px;
+    overflow: hidden;   /* Hides parts of the image outside the circle */
+    display: flex;
+    justify-content: center;
     border-radius: 50%;
-    background-color: aliceblue;
+    object-fit: contain;
     margin-bottom: clamp(1rem,1vh,4rem);
 }
 .imageFrame img
 {
+    width: 100%;
+    height:auto;
     object-fit: cover;
+    object-position: center; 
 }
 .infoGroup
 {
-    display: grid;
-    grid-template-columns: auto,auto;
-    column-gap: 0;
-    border-color: #721BE4;
+    padding: auto;
     width: 80%;
-    padding: 0%;
-    color: #45108a;
-    border-radius: clamp(0.5rem,8vw,12rem);
+    color: #A56DEE;
+    justify-content: center;
+    justify-self: center;
     margin-bottom: clamp(1rem,1vh,4rem);
-    object-fit: contain;
-    background-color:#A56DEE;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    border-radius:clamp(0.5rem,1.5vw,4rem);
 }
-.infoGroup:hover
+.infoField
 {
-    background-color: #f0f8ff;
+    padding: clamp(0.2rem,1vw,2rem);
 }
-.infoGroup:focus
-{
-    background-color: #f0f8ff;
-}
+
 .label
 {
-    grid-column: 1/2;
     background: transparent;
     width: fit-content;
-    margin-left: clamp(0.2rem,1vw,2rem);
     font-weight: bold;
-    margin-right: clamp(0.2rem,1vw,2rem);
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 0%;
@@ -146,21 +154,27 @@ margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
 }
 .value
 {
-    grid-column: 2/2;
     overflow: hidden;
-    align-self: center;
-    justify-self: left;
-    float: left;
-    height: fit-content;
-    background: transparent;
-    margin-left: clamp(0.2rem,1vw,2rem);
+    /* height: fit-content; */
+    object-fit: contain;
     font-weight: medium;
-    margin-right: clamp(0.2rem,1vw,2rem);
     margin-bottom: 0;
     margin-top: 0%;
-    border-bottom: #45108a solid; 
+    border-color: #721BE4;
+    color: #45108a;
+    border-radius: clamp(0.5rem,8vw,12rem);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    background-color:#A56DEE; 
     border-width: 2px;
-    padding: 0;
+    padding: clamp(1rem,1vh,4rem);
+}
+.value:hover
+{
+    background-color: #f0f8ff;
+}
+.value:focus
+{
+    background-color: #f0f8ff;
 }
 .value p
 {
@@ -168,21 +182,7 @@ margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
     margin: 0%;
 }
 
-.buttonContainer
-{
-      display: flex;
-      flex-direction: row;
-      gap: clamp(0.1rem, 0.3rem, 0.5rem);
-      justify-content: center;
-      height: fit-content;
-      font-size: clamp(0.2rem, 1.5vw, 1rem);
-      margin-bottom: clamp(0.2rem, 1.15vw, 1.5rem);
-}
-.changePasswordSection
-{
-    justify-self: center;
-}
-.buttonSOuter
+.buttonStyle
 {
         display: flex;
         border-radius: 3rem;
@@ -196,236 +196,20 @@ margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
         color: #f0f8ff;
         font-weight:normal;
         font-size: clamp(0.1rem, 1vw, 0.7rem); 
-}
-.buttonSOuter:hover .buttonStyle
-    {
-        background:transparent;
-        color: #45108a;
-    }
-    .buttonSOuter:hover
-    {
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-        background-color: aliceblue;
-        color: #45108a;
-    }
-.buttonStyle
-{
-    background: transparent;
         border: none;
         border-radius: 3rem;
         padding: clamp(0.2rem, 1.15vw, 1.5rem);
-        justify-self: center; 
-        justify-content: center;
-        height: fit-content;
-        overflow: hidden;
-        align-items: center;
-        color: #f0f8ff;
-        font-weight:normal;
-        font-size: clamp(0.1rem, 1vw, 0.7rem);
 }
-.loginLink
+
+.editLink
 {
     text-decoration: none;
-    justify-self: left;
-    font-style: normal;
-    font-size: clamp(0.2rem,0.7vw,0.9rem);
-    font-weight: bold;
     color: #f0f8ff;
-    
 }
-.loginLinkOuter
+.buttonStyle:hover
 {
-   margin-bottom: 0;
-}
-.confirmPass
-{
-   margin-bottom: clamp(1rem,1.5vh,4rem);
-}
-.textField
-{
-    display: flex;
-    border-color: #721BE4;
-    border-radius: clamp(0.5rem,8vw,12rem);
-    padding: clamp(0.5rem,1vw,2rem);
-    margin-bottom: clamp(2rem,2.5vh,8rem);
-    object-fit: contain; 
-    background-color:#A56DEE;
-}
-.textField:hover
-{
-    background-color: #f0f8ff;
-}
-.textField:focus
-{
-    background-color: #f0f8ff;
-}
-.textField:focus-within
-{
-    display: flex;
-    border-color: #721BE4;
-    border-radius: clamp(0.5rem,8vw,12rem);
-    padding: clamp(0.5rem,1vw,2rem);
-    margin-bottom: clamp(2rem,2.5vh,8rem);
-    object-fit: contain; 
-    background-color:#f0f8ff;
-}  
-.textField input
-{
-    background: transparent;
-    margin-left: clamp(0.2rem,1vw,2rem);
-    color: #45108a;
-    border: 0;
-    outline: 0;
-    width: 100%;
-
-}
-.textField input::placeholder
-{
-    color: #45108a;
-    opacity: 80%;
-}
-
-.textField input:autofill
-{
-    background: transparent;
-    margin-left: clamp(0.2rem,1vw,2rem);
-    color: #45108a;
-    border: 0;
-    outline: 0;
-    width: 100%;
-}
-   .fieldLogo 
-{
-    width: clamp(1rem,0.9vw,3rem);
-    height: auto;
-    object-fit: cover;
-    opacity: 80%;
-} 
-
-.passwordSuggestion
-{
-    display: none;
-    justify-self: center;
-    font-style: normal;
-    font-size: clamp(0.2rem,0.7vw,0.9rem);
-    font-weight: normal;
-    margin-bottom: clamp(1rem,2.5vh,4rem);
-}
-.passCheck
-{
- text-align: left;
- font-weight: bold;
- color: #f0f8ff;
- font-size: clamp(0.5rem,0.9vw,1rem)
-}
-.passRule
-{
-    padding: 0;
-    margin: 0;
-    align-self: center;
-}
-.passLogo
-{
-    padding: clamp(0.2rem,0.5vw,1rem);
-    width: clamp(0.2rem,0.9vw,1rem);
-    height: auto;
-    object-fit: cover;
-}
-.weak
-{
-    display: flex;
-    justify-self: left;
-    object-fit: contain;
-    color: #A56DEE;
-    font-style: normal;
-    font-size: clamp(0.2rem,0.7vw,0.9rem);
-    font-weight: normal;
-}
-.strong
-{
-    display: flex;
-    justify-self: left;
-    object-fit: contain;
-    color: #f0f8ff;
-    font-style: normal;
-    font-size: clamp(0.2rem,0.7vw,0.9rem);
-    font-weight: normal;
-}
-.invalid
-{
-    display: flex;
-    justify-self: left;
-    object-fit: contain;
-    color: #A56DEE;
-    font-style: normal;
-    font-size: clamp(0.2rem,0.7vw,0.9rem);
-    font-weight: normal;
-}
-.valid
-{
-    display: flex;
-    justify-self: left;
-    object-fit: contain;
-    color: #f0f8ff;
-    font-style: normal;
-    font-size: clamp(0.2rem,0.7vw,0.9rem);
-    font-weight: normal;   
-}
-.hiddenTag
-{
-    display: none;
-}
-.changeButton
-    {
-        background: transparent;
-        border: none;
-        border-radius: 3rem;
-        padding: clamp(0.2rem, 1.15vw, 1.5rem);
-        justify-self: center; 
-        justify-content: center;
-        height: fit-content;
-        overflow: hidden;
-        align-items: center;
-        color: #f0f8ff;
-        font-weight:normal;
-        font-size: clamp(0.1rem, 1vw, 0.7rem);
-        
-    }
-    .buttonOuter
-    {
-        display: flex;
-        border-radius: 3rem;
-        margin-top: clamp(0.2rem, 1.15vw, 1.5rem);
-        justify-self: center; 
-        justify-content: center;
-        height: fit-content;
-        overflow: hidden;
-        align-items: center;
-        background-color: #45108a;
-        color: #f0f8ff;
-        font-weight:normal;
-        font-size: clamp(0.1rem, 1vw, 0.7rem);
-        
-    }
-    
-    .buttonOuter:hover .changeButton
-    {
-        background:transparent;
-        color: #45108a;
-    }
-    .buttonOuter:hover
-    {
         box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
         background-color: aliceblue;
         color: #45108a;
-    }
-    
-    @media (max-width:768px)
-    {
-        .changeButton
-        {
-        align-content: center;
-        background-color: #45108a;
-        color: aliceblue;
-        }
-    }
+}
+

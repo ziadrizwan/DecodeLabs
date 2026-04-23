@@ -12,7 +12,7 @@ form.addEventListener("submit", async (event) => {
     const data = Object.fromEntries(formData);
 
     try {
-        const response = await fetch('/login', {
+        const response = await fetch('/api/auth/login', { // Added /api/auth
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
