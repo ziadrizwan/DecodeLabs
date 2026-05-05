@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const path = require('path');
 const authRoutes = require('./routes/auth'); 
+const nodemon = require('nodemon');
 
 const app = express();
 const port = 3000;
@@ -22,11 +23,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/auth', authRoutes);
+app.use('/', authRoutes);
 
 mongoose.connect('mongodb://127.0.0.1:27017/authDB')
   .then(() => console.log("✅ Successfully connected to MongoDB"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
-app.listen(port, () => 
+app.listen(port, '0.0.0.0', () => 
     console.log(`🚀 Server running on http://localhost:${port}`));

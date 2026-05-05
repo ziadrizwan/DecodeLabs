@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let emailDisplay = document.getElementById('userEmailDisplay');
 
     try {
-        const response = await fetch('/api/auth/get-profile');
+        const response = await fetch('/get-profile');
         const data = await response.json();
 
         if (response.ok) {

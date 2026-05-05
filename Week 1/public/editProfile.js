@@ -48,7 +48,7 @@ fileInput.addEventListener('change', async function () {
         formData.append('profileImage', file);
 
         try {
-            const response = await fetch('/api/auth/upload-profile-pic', {
+            const response = await fetch('/upload-profile-pic', {
                 method: 'POST',
                 body: formData
             });
@@ -71,6 +71,7 @@ fileInput.addEventListener('change', async function () {
 chPassButton.addEventListener("click",function(){
     
     newPasswordForm.classList.remove("hiddenTag");
+    fileLink.textContent = "Change Password";
     cancelButtonDiv.classList.remove("hiddenTag");
     newpassField.classList.remove("hiddenTag");
     chButtonDiv.classList.remove("hiddenTag");
@@ -80,6 +81,7 @@ chPassButton.addEventListener("click",function(){
 cancelButton.addEventListener("click", function(){
     newPasswordForm.classList.add("hiddenTag");
     cancelButtonDiv.classList.add("hiddenTag");
+    fileLink.textContent = "Change Profile Picture";
     newpassField.classList.add("hiddenTag");
     chButtonDiv.classList.add("hiddenTag");
     optionsDiv.classList.add("options");
@@ -282,7 +284,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let emailDisplay = document.getElementById('userEmailDisplay');
 
     try {
-        const response = await fetch('/api/auth/get-profile');
+        const response = await fetch('/get-profile');
         const data = await response.json();
 
         if (response.ok) {
