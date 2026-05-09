@@ -13,8 +13,9 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-
-
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public', 'HomePage.html'));     //redirecting my server to homepage//
+});
 
 router.post('/upload-profile-pic', upload.single('profileImage'), async (req, res) => {
     try {

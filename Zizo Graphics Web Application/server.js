@@ -23,6 +23,8 @@ app.use(express.urlencoded({ extended: true }));  // middleware to parse URL-enc
 
 app.use(express.static(path.join(__dirname, 'public')));    // Serve static files from the public directory//
 
+
+
 app.use('/', authRoutes);              //connect the routes file to the server for each role like login, signup etc for getting api calls from other files.//
 
 mongoose.connect('mongodb://127.0.0.1:27017/authDB')         // Connect to MongoDB database//
