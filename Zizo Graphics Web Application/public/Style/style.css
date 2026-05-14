@@ -9,6 +9,12 @@
 {
         grid-column: 2/3;
         margin: clamp(0.5rem,1.2vh,2rem) 0 0 0;
+        background-color: #1b1b1b;
+        border-radius: clamp(0.2rem, 2vw, 1rem);
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        padding-left: clamp(0.2rem,3vw,8rem);
+        padding-right: clamp(0.2rem,3vw,8rem);
 }
  .container
 {
@@ -30,44 +36,17 @@
 
 .navSection
     {
-        display:flex;
-        flex: 3;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-self: center;
-        overflow:hidden;
-        flex-wrap: wrap;
-        gap: clamp(0.2rem,6vw,14rem);
-        background-color: #1b1b1b;
-        border-radius: 1rem;
-        padding-top: 1.2rem;
-        padding-bottom: 1.2rem;
-        padding-left: clamp(0.2rem,5vw,8rem);
-        padding-right: clamp(0.2rem,5vw,8rem);
+         flex: 3;
+         flex-direction: row;
+         gap: clamp(0.2rem,3vw,7rem);
+         display:flex;
     }
-    @media (min-width:768px){
-        .navSection
-        {
-            flex-direction: row;
-        }
-        .navLogo
-        {
-            width:40px; 
-            height:16px;
-        }
-         .navbutton
-        {
-        align-content: center;
-        background-color: #7600bc;
-        color: whitesmoke;
-        }
-    }
-        
+    
    .navLogo
     {
-     width:100px;
-     height:50px;
+        width: clamp(3rem, 10vw,12rem);
+        height: clamp(0.5rem, 5vh,5rem); 
+        align-self:center;
     }
 
     .navBar
@@ -92,6 +71,8 @@
          background-image: none;
          background-color: whitesmoke;
     }
+
+    
     .navMenu
     {
         display: flex;
@@ -146,7 +127,7 @@
         background-color: #45108a;
         color: whitesmoke;
         font-weight:normal;
-        font-size: clamp(0.1rem, 1vw, 0.7rem);
+        font-size: clamp(0.1rem, 1.5vw, 1rem);
         
     }
     .navbutton:hover
@@ -160,34 +141,52 @@
     {
       display: flex;
       flex-direction: row;
+      align-self: center;
       gap: clamp(0.1rem, 0.3rem, 0.5rem);
       justify-content: center;
       height: fit-content;
-      font-size: clamp(0.2rem, 1.5vw, 1rem);
     }
-    @media (max-width:768px)
-    {
-     .login
-     {
-        padding-top: 0.5rem;
-     }
-     .navBar
-     {
+
+    @media (max-width:760px){
+        .navSection
+        {
+            
+        flex: 3;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-self: center;
+        overflow:hidden;
+        flex-wrap: wrap;
+        gap: clamp(0.2rem,2vw,4rem);
+
+        }
+        .navBar
+        {
         flex-flow: column wrap;
         text-align: center;
         min-width:fit-content;
-     }
-     .navSection
-     {
-        gap: clamp(0.2rem,3vw,6rem);
-     }
-      .navbutton
+        }
+         .navbutton
         {
+        padding: clamp(0.2rem, 1.15vw, 1.5rem);
+        font-size: clamp(0.1rem, 1vw, 0.7rem);
         align-content: center;
         background-color: #7600bc;
-        color: #f5f5f5;
+        color: whitesmoke;
         }
-    }
+        .login
+        {
+          margin: 0%;
+          padding: clamp(0.2rem,1.7vw,2rem) 0 0 0;
+        }
+        .navLogo
+        {
+            margin: 0%;
+            padding: 0%;
+            height: clamp(0.5rem, 2vh,3rem); 
+        }
+    }   
 
     .bodyStyle
     {
@@ -334,23 +333,16 @@
         max-width: 27vw;
     }
 
-    .servicesCardLeft
+    .servicesCard
     {
      display: grid;
+     box-sizing: content-box;
+     border-radius: clamp(0.2rem,0.3vw,2rem);
+     background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
      margin-top: clamp(0.2rem,1.2vh,2rem);
-     row-gap:clamp(0.2rem,1.2vh,2rem);
-     column-gap: clamp(0.2rem,0.6vh,1rem);
-     grid-template-columns: clamp(5rem, 10vw,12rem)  auto ;
+     grid-template-columns: 50% 50% ;
     }
     
-    .servicesCardRight
-    {
-     display: grid;
-     margin-top: clamp(0.2rem,1.2vh,2rem);
-     row-gap:clamp(0.2rem,1.2vh,2rem);
-     column-gap: clamp(0.2rem,0.6vh,1rem);
-     grid-template-columns: clamp( auto 5rem, 10vw,12rem);
-    }
     .servicesHeading
     {
         color:aliceblue;
@@ -364,17 +356,32 @@
         font-weight: normal;
         color: aliceblue;
         margin: 0px;
-        max-width: 50vw;
+        max-width: 70%;
     }
     .imageBox
     {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-self: right;
+        align-self: center;
         border-radius: clamp(0.2rem,0.2vw,2rem);
         object-fit: contain; 
-        width: clamp(5rem, 10vw,12rem);
-        height: clamp(5rem, 10vw,12rem); 
+        padding: clamp(0.5rem,4vw,2rem);  
+        width: clamp(12rem, 18vw,24rem);
+        height: clamp(12rem, 18vw,24rem);
+    }
+    @media (max-width:400px)
+    {
+        .imageBox
+        {
+           width: clamp(8rem, 5vw,12rem);
+           height: clamp(8rem, 5vw,12rem); 
+        }
+    }
+
+    .ImageGrid
+    {      
+        grid-column: 2/2;
+        grid-row: 1/1;
     }
     .serviceImage
     {
@@ -384,47 +391,39 @@
         background-color: aliceblue;
         
     }
-    .servicesTextBox
-    {
-       
-       height: clamp(5rem, 10vw,12rem);
-       border-radius: clamp(0.2rem,0.3vw,2rem);
-       background-image: linear-gradient(-30deg, #45108a 2.4285%, #3d065f 29.2929%, #2e3192 100% );
-     
-    }
+
     .servicesText
     {
    
-      padding: clamp(0.5rem,1vw,1.5rem);  
+      padding: clamp(0.5rem,4vw,2rem); 
+      align-self: center; 
     }
-    .leftImage
-    {      
-        grid-column: 1/2;
-        grid-row: 1/1;
-        outline: #45108a 5px solid;
-        outline-offset: -5px;
-    }
-    .leftwardText
-    {
-        grid-column: 2/2;
-        grid-row: 1/1;
-    }
-     .rightImage
-    {      
-        grid-column: 2/2;
-        grid-row: 1/1;
-        outline: #1b1b1b 5px solid;
-        outline-offset: -5px;
-    }
-    .righwardText
+    
+    .GridText
     {
         grid-column: 1/2;
         grid-row: 1/1;
     }
-     .servicesTextBoxRight
+    .sliderButtons
     {
-       
-       height: clamp(5rem, 10vw,12rem);
-       border-radius: clamp(0.2rem,0.3vw,2rem);
-       background-color: #1b1b1b;
+        display: flex;
+        flex-direction: row;
+        gap: clamp(0.2rem,1.2vw,1rem);
+        padding: clamp(0.2rem,1.2vw,1rem) 0 0 0;
+    }
+    .activeSlide
+    {
+        width: clamp(0.2rem,0.7vw,1rem);
+        height: clamp(0.2rem,0.7vw,1rem);
+        border-radius: 50%;
+        border: clamp(0.1rem,0.15vw,0.3rem) solid antiquewhite;
+        background-color: antiquewhite;
+    }
+      .inactiveSlide
+    {
+        width: clamp(0.2rem,0.7vw,1rem);
+        height: clamp(0.2rem,0.7vw,1rem);
+        border-radius: 50%;
+        border: clamp(0.1rem,0.15vw,0.3rem) solid antiquewhite;
+        background: transparent;
     }

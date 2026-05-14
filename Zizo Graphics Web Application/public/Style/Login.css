@@ -144,6 +144,7 @@ margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
 {
     display: none;
     color: #f0f8ff;
+    border-radius:clamp(0.5rem,1.5vw,4rem);
     font-style: normal;
     font-size: clamp(0.2rem,0.7vw,0.9rem);
     font-weight: normal;
@@ -153,6 +154,7 @@ margin:clamp(1rem,3%,2rem) 0 clamp(0.7rem,1.5%,2rem) 0;
 {
     display: block;
     color: #f0f8ff;
+    border-radius:clamp(0.5rem,1.5vw,4rem);
     font-style: normal;
     font-size: clamp(0.2rem,0.7vw,0.9rem);
     font-weight: normal;
