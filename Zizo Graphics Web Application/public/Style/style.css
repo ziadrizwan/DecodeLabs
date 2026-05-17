@@ -60,7 +60,7 @@
         overflow: hidden;
         padding: auto;
         background-color: #45108a;
-        color:whitesmoke; 
+        color:#f5f5f5; 
         font-weight :normal;
         font-size: clamp(0.1rem, 1.5vw, 1rem);
         
@@ -427,3 +427,208 @@
         border: clamp(0.1rem,0.15vw,0.3rem) solid antiquewhite;
         background: transparent;
     }
+.footer
+    {
+      
+      grid-column: 2/3;
+      margin: clamp(0.5rem,1.2vh,2rem) 0 0 0;
+      font-size: clamp(0.1rem, 1.5vw, 1rem);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: clamp(0.2rem, 2vw, 1rem);
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      padding-left: clamp(0.2rem,3vw,8rem);
+      padding-right: clamp(0.2rem,3vw,8rem);
+      align-items: center;
+      border-radius: 1rem; 
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2) ;
+    }
+    .footerIcons
+    {
+      width: clamp(0.5rem,1.5vw,1.2rem);
+      height: clamp(0.5rem,1.5vw,1.2rem);
+      padding: 0 0 0 0 0;
+      padding-right: clamp(0.2rem,0.9vw,0.7rem);
+    }
+
+      .footerContent
+    {  
+        
+        display: flex;
+        gap: clamp(0.2rem,0.9vw,0.7rem);
+        color:whitesmoke; 
+        align-content:inherit;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        font-weight: normal;
+        overflow: hidden;
+    }
+     .footerSection
+    {
+      padding: clamp(0.2rem,0.9vw,1rem);
+      max-width: 30%;
+    }
+    .footerHeading
+    {
+      font-weight:bold;
+    }
+    .footerFlogo
+    {
+        display: block;
+        object-fit: cover;
+        padding:0%;
+        margin: 0%;  
+        width: clamp(3rem, 8vw,10rem);
+        height: clamp(0.5rem, 5vh,5rem); 
+    }
+
+    .slogan
+    {
+        margin-top: 0.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: clamp(0.1rem, 1.5vw, 0.7rem);
+
+    }
+    .introTools
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .servicesColumn
+    {
+      display:flex;
+      flex-direction: row;
+      gap: clamp(0.2rem,2vw,2rem);
+      
+    }
+    .footerSlist
+    {
+      padding-left: clamp(0.2rem,0.9vw,0.7rem);
+      margin:auto;
+      max-width: max-content;
+    }
+    .footerIconlist
+    {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+    .footerContactlink
+    {
+      color:whitesmoke;
+      padding: 0%;
+      text-decoration: none;
+    }
+    .footerContactlist
+    {
+        padding-left: 0%;
+        line-height: 1.5rem;
+    }
+    .footerDivider
+    {
+      width: clamp(0.0015rem,10vw,0.15rem);
+      background-color: aliceblue;
+      height: clamp(4rem,20vh,8rem);
+      display: inline;
+      border-radius: 0.05rem;
+      align-self:center;
+    }
+    .copyrights
+    {
+      align-self: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+      font-size: smaller;
+      font-weight: lighter;
+      color:whitesmoke;
+      max-height: fit-content;
+    }
+    @media(max-width:760px)
+    {
+      .footerContent
+    {  
+       flex-direction: column; 
+        gap: clamp(0.2rem,0.9vw,0.7rem);
+        color:whitesmoke; 
+        align-content:inherit;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        font-weight: normal;
+        overflow: hidden;
+        justify-self: center;
+        
+    }
+    .footerSection
+    {
+        max-width: max-content;
+        align-self: center;
+        justify-content: center;
+        font-size: clamp(0.1rem, 2.5vw, 1rem);
+    }
+    .footerFlogo
+    {
+         height: clamp(0.5rem, 2vh,3rem);
+         justify-self: center; 
+    }
+    .footerText
+    {
+        justify-self: center;
+        text-align: center;
+    }
+    .slogan
+    {
+        justify-self: center;
+    }
+    .introTools
+    {
+        justify-self: center;
+    }
+    .footerDivider
+    {
+      width:  clamp(1rem,10vw,2rem);
+      background-color: aliceblue;
+      height: clamp(0.0015rem,2vh,0.10rem);
+      display: inline;
+      border-radius: 0.05rem;
+      align-self:center;
+      justify-self: center;
+    }
+    .footerHeading
+    {
+      font-weight:bold;
+      justify-self: center;
+    }
+    .servicesColumn
+    { 
+        flex-direction: column;
+        gap: clamp(0.2rem,2vw,2rem); 
+    }
+    .footerSlist
+    {
+      
+      display: flex;
+      flex-direction:row;
+      list-style-type: none;
+      margin:auto;
+      max-width: max-content;
+    }
+    .footerSItems
+    {
+     padding-right: clamp(0.2rem,1vw,1rem);
+    }
+   .contactOption
+   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .footerContactlist
+   {
+    justify-items: center;
+   }
+   .footerIconlist
+   {
+     margin-bottom :clamp(0.2rem,1vh,1.5rem);
+   }
+}
